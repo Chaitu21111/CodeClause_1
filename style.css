@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'INDIA2023-boldFont';
-  src: url(Chaitu21111/Unit_converter/blob/master/INDIA2023-boldFont.ttf) format('truetype');
+  src: url(INDIA2023-boldFont.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'CWC-RegularFont';
-  src: url(Chaitu21111/Unit_converter/blob/master/CWC-RegularFont.ttf) format('truetype');
+  src: url(CWC-RegularFont.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'CWC-LightFont';
-  src: url(Chaitu21111/Unit_converter/blob/master/CWC-LightFont.ttf) format('truetype');
+  src: url(CWC-LightFont.ttf) format('truetype');
 }
 
 body {
