@@ -1,98 +1,46 @@
-// get elements
-const fromInput = document.getElementById("from-input");
-const fromUnit = document.getElementById("from-unit");
-const toInput = document.getElementById("from-input2");
-const toUnit = document.getElementById("to-unit");
-const convertBtn = document.getElementById("convert-btn");
-// const resultDiv = document.getElementById("result");
+document.getElementById("temperatureInput").addEventListener("input", function () {
+  var temperatureInput = parseFloat(this.value);
+  var convertButton = document.getElementById("convertButton");
 
-// add event listener to convert button
-convertBtn.addEventListener("click", () => {
-  // get values
-  const fromValue = Number(fromInput.value);
-  const fromUnitValue = fromUnit.value;
-  const toUnitValue = toUnit.value;
-
-  // convert units
-  let result;
-  switch (fromUnitValue) {
-    case "milli":
-      result = convertFromMilli(fromValue, toUnitValue);
-      break;
-    case "centi":
-      result = convertFromCenti(fromValue, toUnitValue);
-      break;
-    case "meters":
-      result = convertFromMeters(fromValue, toUnitValue);
-      break;
-    case "kilometers":
-      result = convertFromKilometers(fromValue, toUnitValue);
-      break;
-    default:
-      result = "Invalid from unit";
+  if (!isNaN(temperatureInput) || isNaN(temperatureInput)) {
+    convertButton.disabled = false;
+  } else {
+    convertButton.disabled = true;
   }
-
-  // display result
-  toInput.value =`${result}`;
 });
 
-// conversion functions
-function convertFromMilli(value, toUnit) {
-  switch (toUnit) {
-    case "milli":
-      return value;
-    case "centi":
-      return value / 10;
-    case "meters":
-      return value / 1000;
-    case "kilometers":
-      return value / 1000000;
-    default:
-      return "Invalid to unit";
-  }
-}
+function convertTemperature() {
+  var temperature = parseFloat(document.getElementById("temperatureInput").value);
+  var convertFrom = document.getElementById("convertFrom").value;
+  var convertTo = document.getElementById("convertTo").value;
 
-function convertFromCenti(value, toUnit) {
-  switch (toUnit) {
-    case "milli":
-      return value * 10;
-    case "centi":
-      return value;
-    case "meters":
-      return value / 100;
-    case "kilometers":
-      return value / 100000;
-    default:
-      return "Invalid to unit";
-  }
-}
+  var convertedTemperature;
 
-function convertFromMeters(value, toUnit) {
-  switch (toUnit) {
-    case "milli":
-      return value * 1000;
-    case "centi":
-      return value * 100;
-    case "meters":
-      return value;
-    case "kilometers":
-      return value / 1000;
-    default:
-      return "Invalid to unit";
+  if (convertFrom === "celsius") {
+    if (convertTo === "fahrenheit") {
+      convertedTemperature = (temperature * 9 / 5) + 32;
+    } else if (convertTo === "kelvin") {
+      convertedTemperature = temperature + 273.15;
+    } else {
+      convertedTemperature = temperature;
+    }
+  } else if (convertFrom === "fahrenheit") {
+    if (convertTo === "celsius") {
+      convertedTemperature = (temperature - 32) * 5 / 9;
+    } else if (convertTo === "kelvin") {
+      convertedTemperature = (temperature + 459.67) * 5 / 9;
+    } else {
+      convertedTemperature = temperature;
+    }
+  } else if (convertFrom === "kelvin") {
+    if (convertTo === "celsius") {
+      convertedTemperature = temperature - 273.15;
+    } else if (convertTo === "fahrenheit") {
+      convertedTemperature = (temperature * 9 / 5) - 459.67;
+    } else {
+      convertedTemperature = temperature;
+    }
   }
-}
 
-function convertFromKilometers(value, toUnit) {
-  switch (toUnit) {
-    case "milli":
-      return value * 1000000;
-    case "centi":
-      return value * 100000;
-    case "meters":
-      return value * 1000;
-    case "kilometers":
-      return value;
-    default:
-      return "Invalid to unit";
-  }
+  document.getElementById("convertedTemperature").innerHTML = "Converted Temperature: " + convertedTemperature + " " + convertTo;
 }
