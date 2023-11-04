@@ -31,7 +31,7 @@ body {
 
 #mn  {
   font-family: 'INDIA2023-boldFont';
-  transform: translateX(1.4em) ;
+  transform: translateX(1.1em) ;
 }
 
  input , select , form {
@@ -234,7 +234,7 @@ p{
   }
 }
 
-@media (max-width: 275px){
+@media (max-width: 282px){
   #mn , h2{
     font-size: small;
   }
