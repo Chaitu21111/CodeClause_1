@@ -1,179 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Unit Converter</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT CONVERTER</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body 
-{
-    /* background-image:  url('https://www.linkpicture.com/q/image_391.jpg'); */
-    background: linear-gradient(to right, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0)), url('https://www.linkpicture.com/q/image_391.jpg');;
-  background-size: fill;
-  
-  background-position: auto;
-  object-fit: fill;
-  background-repeat: no repeat;
-  color: rgb(255,500, 0);
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-   margin-top: 4em;
-
-  }
-  #newclass{
-    display: flex;
-    filter: brightness(1);
-    align-items: center;
-    justify-content: center;
-    margin-left:3em ;
-  }
- .input-group{
-    padding: 20px;
-    margin-left: 15px;
-    filter: brightness(1);
- }
-  .Converter {
-    padding: 165px;
-    margin-left: 20px;
-    filter: brightness(1);
-  }
-  .container {
-    filter: brightness(1);
-    position: center;
-    height: 150px;
-    width: 1200px;
-    background-size: cover;
-  }
-  .text{
-    position: absolute;
-    margin-top: 20px;
-    top: 90%;
-    left: 70%;
-    transform: translate(-50%,-50%);
-    color: white;
-    text-align: center;
-filter: brightness(1);
-}
-  /* .background {
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    filter: brightness(0);
-    
-  } */
-
-  h1{
-    margin-left: 1em;filter: brightness(1);
-  }
-  #timer {
-   filter: brightness(1);
-    margin-top: 50px;
-    font-size: 50px;
-  }
-  
-  #buttons {
- filter: brightness(1);
-    margin-top: 50px;
-  }
-  
-  button {
- filter: brightness(1);
-    color:rgb(0, 0, 0);
-    width: 110px;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-left: 1.5em;
-    margin-right: 20px;
-    font-family: 'Josefin Sans', sans-serif;
-    transition: all linear 100ms;
-   
-  }
-  button:hover{
-    background-color: rgb(69, 69, 69);
-    border: 2px solid white;
-    color: white;filter: brightness(1);
-  }
-  #from-input{
-    background: rgba(197, 197, 197, 0);
-    border-radius: 5px;filter: brightness(1);
-    border: 2px solid white;
-    color: white;
-  }
-  #from-input2{
-    background: rgba(197, 197, 197, 0);
-    border-radius: 5px;filter: brightness(1);
-    border: 2px solid white;
-    color: white;
-  }
-
-  #to-unit{
-    font-family: sans-serif;
-  }
-  label{
-    display: flex;filter: brightness(1);
-    justify-content: flex-start;
-    margin-bottom: -1em;
-  }
-
-  @media(max-width:720px) {
-     #newclass{
-      display: flex;filter: brightness(1);
-      flex-direction: column;
-      
-     }
-
-     h1{
-      font-size: 1.5em;filter: brightness(1);
-      margin-bottom: -0.5em;
-     }
-     #newclass{
-    filter: brightness(1);
-    /* margin-left:0em ; */
-  }
-    
-  }
-  
- 
-</style>
 <body>
-  <div id ="newclass">
-	<div class="Converter">
-		<h1>UNIT CONVERTER</h1>
-		<div class="input-group">
-			<label for="from-input">
-        From :
-      </label> <br>
-			<input type="text" id="from-input">
-			<select id="from-unit">
-				<option value="milli">Millimeters</option>
-        <option value="centi">Centimeters</option>
-        <option value="meters">Meters</option>
-				<option value="kilometers">Kilometers</option>
+    <div class="container">
+        <h1 id="mn">UNIT CONVERTER</h1>
+        <h2>Temperature Converter</h2>
+        <form onsubmit="event.preventDefault(); convertTemperature();">
+          <label for="temperatureInput">Enter temperature</label>
+          <input type="text" id="temperatureInput">
+          
+          <label for="convertFrom">Convert from</label>
+          <select id="convertFrom">
+            <option value="celsius" >Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+          
+          <label for="convertTo">Convert to</label>
+          <select id="convertTo">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+          
+          <input type="submit" value="Convert" id="convertButton" disabled>
+          
+          <div class="result" id="convertedTemperature"></div>
+        </form>
         
-			</select>
-		</div>
-		<div class="input-group">
-			<label for="to-input">
-        To :
-      </label> <br>
-            <input type="text" id="from-input2">
-			<select id="to-unit">
-				<option value="milli">Millimeters</option>
-        <option value="centi">Centimeters</option>
-        <option value="meters">Meters</option>
-				<option value="kilometers">Kilometers</option>
-        
-			</select>
-		</div>
-		<button id="convert-btn">Convert</button>
-		
-</div>
+        <div class="formulas">
+          <h3>FORMULAS</h3>
+          <p><strong>Celsius to Fahrenheit:</strong> (°C * 9/5) + 32</p>
+          <p><strong>Celsius to Kelvin:</strong>     (°C + 273.15)</p>
+          <p><strong>Fahrenheit to Celsius:</strong> (F - 32) * 5/9</p>
+          <p><strong>Fahrenheit to Kelvin:</strong> (F + 459.67) * 5/9</p>
+          <p><strong>Kelvin to Celsius:</strong> (K - 273.15)</p>
+          <p><strong>Kelvin to Fahrenheit:</strong> (K * 9/5) - 459.67</p>
+        </div>
+      </div>
 
-	<script src="app.js"></script>
+      <script src="app.js"></script>
 </body>
 </html>
