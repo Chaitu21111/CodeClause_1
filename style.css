@@ -10,7 +10,6 @@
 
 body {
   background-color: rgb(220, 224, 224);
-  font-family: 'CWC-RegularFont';
 }
 
 /* Container styles */
@@ -24,7 +23,7 @@ body {
 
 }
 
-#mn  {
+h1  {
   font-family: 'INDIA2023-boldFont';
   transform: translateX(1.1em) ;
 }
