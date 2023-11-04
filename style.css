@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: rgb(238, 241, 241);
+  background-color: rgb(220, 224, 224);
   font-family: 'CWC-RegularFont';
 }
 
@@ -40,7 +40,8 @@ body {
 
 h2 {
   font-family: 'CWC-LightFont';
-  transform: translateX(3em);
+  transform: translateX(3.2em);
+  font-weight: lighter;
 }
 
 h3{
@@ -53,6 +54,7 @@ h3{
 p{
   transform: translateX(0.3em);
   border-spacing: 10;
+  color: grey ;
 }
 
 /* Header styles */
@@ -95,8 +97,9 @@ p{
 /* Button styles */
 .container input[type="submit"] {
   padding: 10px;
-  background-color: grey ;
-  color: white;
+  background-color: rgb(220, 224, 224);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -153,7 +156,7 @@ p{
 }
 
 .container input[type="submit"]:hover:not(:disabled) {
-  background-color: rgb(18, 18, 17);
+  background-color: #2c2d2e;
   transform: scale(1.05);
 }
 
