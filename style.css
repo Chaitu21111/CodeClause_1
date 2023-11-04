@@ -29,7 +29,7 @@ body {
 
 }
 
-#mn  {
+h1  {
   font-family: 'INDIA2023-boldFont';
   transform: translateX(1.1em) ;
 }
@@ -45,7 +45,7 @@ h2 {
 }
 
 h3{
-  font-family: 'INDIA2023-BoldFont';
+  font-family: 'INDIA2023-boldFont';
   transform: translateX(7.5em);
   margin-bottom: 4px ;
   margin-top: 0 ;
@@ -217,7 +217,7 @@ p{
     font-size: small ;
     text-align: left;
   }
-  #mn {
+  h1 {
     font-size: large;
     text-align: center;
     transform: translateX(2px) ;
@@ -235,7 +235,7 @@ p{
 }
 
 @media (max-width: 282px){
-  #mn , h2{
+  h1 , h2{
     font-size: small;
   }
   label , option , select {
