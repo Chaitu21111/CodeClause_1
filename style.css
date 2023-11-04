@@ -1,10 +1,11 @@
 @font-face { 
-  font-family: 'INDIA2023-boldFont'; 
-  src: url(https://github.com/Chaitu21111/Unit_converter/blob/master/INDIA2023-boldFont.ttf) format('truetype'); 
-} 
-@font-face { 
   font-family: 'CWC-RegularFont'; 
   src: url(https://github.com/Chaitu21111/Unit_converter/blob/master/CWC-RegularFont.ttf) format('truetype'); 
+}
+
+@font-face { 
+  font-family: 'INDIA2023-boldFont'; 
+  src: url(https://github.com/Chaitu21111/Unit_converter/blob/master/INDIA2023-boldFont.ttf) format('truetype'); 
 }
 
 body {
