@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'INDIA2023-boldFont';
-  src: url(font/INDIA2023-BoldFont-TTF/INDIA2023-boldFont.ttf) format('truetype');
+  src: url(INDIA2023-boldFont.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'CWC-RegularFont';
-  src: url(font/CWC-RegularFont-TTF/CWC-RegularFont.ttf) format('truetype');
+  src: url(CWC-RegularFont.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'CWC-LightFont';
-  src: url(font/CWC-LightFont-TTF/CWC-LightFont.ttf) format('truetype');
+  src: url(CWC-LightFont.ttf) format('truetype');
 }
 
 body {
