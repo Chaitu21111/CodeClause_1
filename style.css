@@ -1,16 +1,10 @@
-@font-face {
-  font-family: 'INDIA2023-boldFont';
-  src: url(https://github.com/Chaitu21111/Unit_converter/blob/master/INDIA2023-boldFont.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'CWC-RegularFont';
-  src: url(https://github.com/Chaitu21111/Unit_converter/blob/master/CWC-RegularFont.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'CWC-LightFont';
-  src: url(https://github.com/Chaitu21111/Unit_converter/blob/master/CWC-LightFont.ttf) format('truetype');
+@font-face { 
+  font-family: 'INDIA2023-boldFont'; 
+  src: url(https://github.com/Chaitu21111/Unit_converter/blob/master/INDIA2023-boldFont.ttf) format('truetype'); 
+} 
+@font-face { 
+  font-family: 'CWC-RegularFont'; 
+  src: url(https://github.com/Chaitu21111/Unit_converter/blob/master/CWC-RegularFont.ttf) format('truetype'); 
 }
 
 body {
@@ -29,23 +23,22 @@ body {
 
 }
 
-h1  {
+#mn  {
   font-family: 'INDIA2023-boldFont';
   transform: translateX(1.1em) ;
 }
 
- input , select , form {
+ input , select , form , h2 {
   font-family: 'CWC-RegularFont' ;
 }
 
 h2 {
-  font-family: 'CWC-LightFont';
-  transform: translateX(3.2em);
+  transform: translateX(3em);
   font-weight: lighter;
 }
 
 h3{
-  font-family: 'INDIA2023-boldFont';
+  font-family: 'INDIA2023-BoldFont';
   transform: translateX(7.5em);
   margin-bottom: 4px ;
   margin-top: 0 ;
@@ -74,6 +67,7 @@ p{
 .container label {
   font-weight: bold;
   color: #333333;
+  margin-bottom: 0;
 }
 
 /* Input styles */
@@ -83,6 +77,7 @@ p{
   border-radius: 5px;
   font-size: 14px;
   color: #555555;
+  margin-top:none ;
 }
 
 /* Select styles */
@@ -217,7 +212,7 @@ p{
     font-size: small ;
     text-align: left;
   }
-  h1 {
+  #mn {
     font-size: large;
     text-align: center;
     transform: translateX(2px) ;
@@ -235,7 +230,7 @@ p{
 }
 
 @media (max-width: 282px){
-  h1 , h2{
+  #mn , h2{
     font-size: small;
   }
   label , option , select {
