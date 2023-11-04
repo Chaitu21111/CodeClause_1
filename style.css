@@ -1,11 +1,11 @@
 @font-face { 
-  font-family: 'CWC-RegularFont'; 
-  src: url(CWC-RegularFont.ttf) format('truetype'); 
+  font-family: 'INDIA2023-boldFont'; 
+  src: url(Chaitu21111/Unit_converter/blob/master/INDIA2023-boldFont.ttf) format('truetype'); 
 }
 
 @font-face { 
-  font-family: 'INDIA2023-boldFont'; 
-  src: url(Chaitu21111/Unit_converter/blob/master/INDIA2023-boldFont.ttf) format('truetype'); 
+  font-family: 'CWC-RegularFont'; 
+  src: url(CWC-RegularFont.ttf) format('truetype'); 
 }
 
 body {
@@ -23,13 +23,16 @@ body {
 
 }
 
-h1  {
+h1 , h3 {
   font-family: 'INDIA2023-boldFont';
-  transform: translateX(1.1em) ;
 }
 
- input , select , form , h2 {
+input , select , form , h2 {
   font-family: 'CWC-RegularFont' ;
+}
+
+h1 {
+  transform: translateX(1.1em) ;
 }
 
 h2 {
@@ -38,7 +41,6 @@ h2 {
 }
 
 h3{
-  font-family: 'INDIA2023-BoldFont';
   transform: translateX(7.5em);
   margin-bottom: 4px ;
   margin-top: 0 ;
