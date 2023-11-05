@@ -8,6 +8,7 @@
   src: url(CWC-RegularFont.ttf) format('truetype'); 
 }
 
+
 body {
   background-color: rgb(220, 224, 224);
   font-family: 'CWC-RegularFont';
@@ -46,7 +47,7 @@ h3{
   
 }
 p{
-  text-align:left ;
+  text-align:center ;
   border-spacing: 10;
   color: grey ;
 }
@@ -210,7 +211,7 @@ p{
   }
   p{
     font-size: small ;
-    text-align: left;
+    text-align: center;
   }
   #mn {
     font-size: large;
@@ -225,7 +226,7 @@ p{
 @media (max-width: 330px) {
   p, .result{
     font-size:x-small ;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -242,7 +243,7 @@ p{
   }
   p {
     font-size: 5px ;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -265,7 +266,6 @@ p{
     font-size: 5px;
     line-height: 1.5;
     letter-spacing: normal;
-    text-align: left ;
+    text-align: center ;
   }
 }
-
