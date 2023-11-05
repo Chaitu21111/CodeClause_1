@@ -14,7 +14,7 @@ body {
 
 /* Container styles */
 .container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 40px;
   background-color: #ffffff;
@@ -32,11 +32,11 @@ input , select , form , h2 , .formulas p {
 }
 
 h1 {
-  transform: translateX(1.1em) ;
+  transform: translateX(2.5em) ;
 }
 
 h2 {
-  transform: translateX(3em);
+  transform: translateX(4.8em);
   font-weight: lighter;
 }
 
@@ -203,7 +203,7 @@ p{
   background-color: rgb(18, 18, 17);
 }
 
-@media (max-width:520px){
+@media (max-width:600px){
 
   h2 , h3  {
     text-align: center;
