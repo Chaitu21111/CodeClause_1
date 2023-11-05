@@ -26,7 +26,7 @@ body {
 
 #mn  {
   font-family: 'INDIA2023-boldFont';
-  transform: translateX(2.5em) ;
+  text-align:center ;
 }
 
  input , select , form , h2 {
@@ -34,19 +34,19 @@ body {
 }
 
 h2 {
-  transform: translateX(4.8em);
+  text-align: center ;
   font-weight: lighter;
 }
 
 h3{
   font-family: 'INDIA2023-BoldFont';
-  transform: translateX(7.5em);
   margin-bottom: 4px ;
   margin-top: 0 ;
+  text-align:center;
   
 }
 p{
-  transform: translateX(0.3em);
+  text-align:left ;
   border-spacing: 10;
   color: grey ;
 }
@@ -207,7 +207,6 @@ p{
   h2 , h3  {
     text-align: center;
     font-size: small;
-    transform: translateX(2px);
   }
   p{
     font-size: small ;
@@ -216,7 +215,7 @@ p{
   #mn {
     font-size: large;
     text-align: center;
-    transform: translateX(2px) ;
+    
   }
   label {
     font-size: small;
@@ -269,3 +268,4 @@ p{
     text-align: left ;
   }
 }
+
