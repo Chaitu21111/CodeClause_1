@@ -232,8 +232,9 @@ p{
 }
 
 @media (max-width: 282px){
-  #mn , h2{
-    font-size: small;
+  #mn , h2 , h3{
+    font-size: x-small;
+    text-align: center ;
   }
   label , option , select {
     font-size: x-small;
@@ -242,15 +243,17 @@ p{
     size: small ;
   }
   p {
-    font-size: 10% ;
+    font-size: 5px ;
+    text-align: left;
   }
 }
 
-@media (max-width: 200px) {
+@media (max-width:250px) {
   #mn , h3 , h2 , option {
     font-size: 50%;
+    text-align: center ;
   }
-  form , label , select {
+  form , label , select , option[input=text] {
     font-size: xx-small ;
   }
   button {
@@ -261,7 +264,9 @@ p{
     size: xx-small;
   }
   p {
-    font-size: 5%;
+    font-size: 5px;
     line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left ;
   }
 }
