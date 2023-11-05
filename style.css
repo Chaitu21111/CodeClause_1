@@ -10,6 +10,7 @@
 
 body {
   background-color: rgb(220, 224, 224);
+  font-family: 'CWC-RegularFont';
 }
 
 /* Container styles */
@@ -23,16 +24,13 @@ body {
 
 }
 
-h1 , h3 {
+#mn  {
   font-family: 'INDIA2023-boldFont';
-}
-
-input , select , form , h2 , .formulas p {
-  font-family: 'CWC-RegularFont' ;
-}
-
-h1 {
   transform: translateX(2.5em) ;
+}
+
+ input , select , form , h2 {
+  font-family: 'CWC-RegularFont' ;
 }
 
 h2 {
@@ -41,6 +39,7 @@ h2 {
 }
 
 h3{
+  font-family: 'INDIA2023-BoldFont';
   transform: translateX(7.5em);
   margin-bottom: 4px ;
   margin-top: 0 ;
